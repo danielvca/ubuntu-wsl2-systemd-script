@@ -88,4 +88,5 @@ else
   echo "  setx BASH_ENV /etc/bash.bashrc"
   echo
 fi
+echo "  roda1"
 sudo iotedge config apply
