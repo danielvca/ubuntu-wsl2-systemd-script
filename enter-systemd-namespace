@@ -52,3 +52,4 @@ if [ -n "$SYSTEMD_PID" ] && [ "$SYSTEMD_PID" != "1" ]; then
     exit 1
 fi
 #sudo iotedge config apply
+echo "  roda2"
