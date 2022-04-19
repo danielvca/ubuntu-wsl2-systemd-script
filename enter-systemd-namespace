@@ -34,6 +34,7 @@ if [ -z "$SYSTEMD_PID" ]; then
         SYSTEMD_PID="$(ps -eo pid=,args= | awk '$2" "$3=="'"$SYSTEMD_EXE"'" {print $1}')"
         #sudo iotedge config apply
     done
+    sudo iotedge config apply
 fi
 
 USER_HOME="$(getent passwd | awk -F: '$1=="'"$SUDO_USER"'" {print $6}')"
