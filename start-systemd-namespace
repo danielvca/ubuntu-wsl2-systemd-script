@@ -20,4 +20,4 @@ if [ -n "$PRE_NAMESPACE_PWD" ]; then
     cd "$PRE_NAMESPACE_PWD"
     unset PRE_NAMESPACE_PWD
 fi
-sudo iotedge config apply
+
