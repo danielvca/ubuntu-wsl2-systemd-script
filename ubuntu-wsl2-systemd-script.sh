@@ -88,5 +88,5 @@ else
   echo "  setx BASH_ENV /etc/bash.bashrc"
   echo
 fi
-echo "  roda1"
+echo "  Configuring IoT Edge"
 sudo iotedge config apply
