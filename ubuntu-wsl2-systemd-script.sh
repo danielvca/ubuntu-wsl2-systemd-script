@@ -88,4 +88,4 @@ else
   echo "  setx BASH_ENV /etc/bash.bashrc"
   echo
 fi
-#sudo iotedge config apply
+sudo iotedge config apply
