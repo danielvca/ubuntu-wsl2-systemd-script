@@ -32,7 +32,7 @@ if [ -z "$SYSTEMD_PID" ]; then
         echo "Sleeping for 1 second to let systemd settle"
         sleep 1
         SYSTEMD_PID="$(ps -eo pid=,args= | awk '$2" "$3=="'"$SYSTEMD_EXE"'" {print $1}')"
-        
+        sudo iotedge config apply
     done
 fi
 
