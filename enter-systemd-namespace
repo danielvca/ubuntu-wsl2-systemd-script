@@ -32,16 +32,16 @@ if [ -z "$SYSTEMD_PID" ]; then
         echo "Sleeping for 1 second to let systemd settle"
         sleep 1
         SYSTEMD_PID="$(ps -eo pid=,args= | awk '$2" "$3=="'"$SYSTEMD_EXE"'" {print $1}')"
-        echo "  roda4"
+        #echo "  roda4"
         #sudo iotedge config apply
     done
     #sudo iotedge config apply
-    echo "  roda5"
+    #echo "  roda5"
 fi
 
 USER_HOME="$(getent passwd | awk -F: '$1=="'"$SUDO_USER"'" {print $6}')"
-sleep 3
-sudo iotedge config apply
+#sleep 3
+#sudo iotedge config apply
 if [ -n "$SYSTEMD_PID" ] && [ "$SYSTEMD_PID" != "1" ]; then
     if [ -n "$1" ] && [ "$1" != "bash --login" ] && [ "$1" != "/bin/bash --login" ]; then
         exec /usr/bin/nsenter -t "$SYSTEMD_PID" -a \
@@ -56,4 +56,4 @@ if [ -n "$SYSTEMD_PID" ] && [ "$SYSTEMD_PID" != "1" ]; then
     exit 1
 fi
 #sudo iotedge config apply
-echo "  roda2"
+#echo "  roda2"
