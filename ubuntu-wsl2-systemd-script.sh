@@ -88,5 +88,5 @@ else
   echo "  setx BASH_ENV /etc/bash.bashrc"
   echo
 fi
-echo "  Configuring IoT Edge"
+echo "  Setting up IoT Edge for the 1st time"
 sudo iotedge config apply
