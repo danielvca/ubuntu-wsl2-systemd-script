@@ -56,5 +56,8 @@ if [ -n "$SYSTEMD_PID" ] && [ "$SYSTEMD_PID" != "1" ]; then
     echo "Existential crisis"
     exit 1
 fi
+sleep 10
+echo "  Applying Docker permissions"
+sudo chmod 666 /var/run/docker.sock
 #sudo iotedge config apply
 #echo "  roda2"
