@@ -90,6 +90,3 @@ else
 fi
 echo "  Setting up IoT Edge for the 1st time"
 sudo iotedge config apply
-sleep 10
-echo "  Applying Docker permissions"
-sudo chmod 666 /var/run/docker.sock
