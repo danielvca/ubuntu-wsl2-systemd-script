@@ -41,7 +41,7 @@ fi
 
 USER_HOME="$(getent passwd | awk -F: '$1=="'"$SUDO_USER"'" {print $6}')"
 echo "  ==========Applying IoT Edge Configuration========"
-sleep 10
+sleep 3
 echo "  Applying Docker permissions"
 sudo chmod 666 /var/run/docker.sock
 #sleep 3
